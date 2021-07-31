@@ -64,6 +64,9 @@ const controlAddBookmarks = function () {
 const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
+const newFeature = function () {
+  console.log('This is the new feature');
+};
 
 const controlAddRecipe = async function (newRecipe) {
   try {
@@ -76,7 +79,7 @@ const controlAddRecipe = async function (newRecipe) {
     setTimeout(function () {
       addRecipeView.toggleOpen();
     }, MODAL_CLOSE_SEC * 1000);
-    console.log('Forkify Project');
+    newFeature();
   } catch (err) {
     console.error(err);
     addRecipeView.handlError(err.message);
